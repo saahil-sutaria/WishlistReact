@@ -1,0 +1,86 @@
+#main{
+
+    width: 50%;
+}
+
+#Container{
+    margin: auto;
+    position: relative;
+
+}
+#heading{
+    margin:auto;
+    line-height:51px;
+    color: #1b2838;
+    vertical-align:middle;
+    font-family: Chalkboard;
+    font-size: 30px;
+    font-weight: 900;
+}
+modal-dialog {
+    width: 60px;
+
+}
+.float-right{
+    font-size: 12px;
+}
+#head{
+    margin:auto;
+    font-size: 15px;
+    font-weight: 700;
+    color: gray;
+    vertical-align:middle;
+}
+
+.Content{
+    margin: auto;
+    padding: 8px;
+    vertical-align:middle;
+
+}
+.butt{
+    width: 375px;
+    color: gray;
+    height: 40px;
+    border: gray 2px solid;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 5px black;
+    outline: none;
+
+}
+.card{
+    width: 350px;
+    height: 150px;
+    margin: auto;
+    box-shadow: 0px 0px 5px black;
+}
+
+
+.button {
+    background-color: Transparent;
+    width: 50px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+
+}
+
+input[type=text]:focus {
+    border: purple 2px solid;
+}
+.colo{
+    background: purple;
+}
+.container:hover .button {
+    opacity: 1;
+}
+
+.posi{
+    padding-left: 45px;
+    color: lightyellow;
+    font-family: Chalkboard;
+}
