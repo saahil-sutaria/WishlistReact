@@ -1,7 +1,7 @@
 import React,{Component, useState} from "react";
 import {Button} from "react-bootstrap";
 import './list.css'
-import {Container, Row, Card, Modal,} from "react-bootstrap";
+import {Container, Row, Card, Modal,InputGroup} from "react-bootstrap";
 
 
  export default class Joblists  extends Component {
@@ -14,6 +14,7 @@ import {Container, Row, Card, Modal,} from "react-bootstrap";
              time:0,
 
          }
+         this.arr=[]
          this.image = new Map()
          console.log(typeof this.image)
          this.image={
@@ -42,6 +43,7 @@ import {Container, Row, Card, Modal,} from "react-bootstrap";
              this.data[key].time = this.data[key].time+60
          }
      }
+     handleShow = () => this.setState({show: true});
 
      handleClose = () => {
          this.setState({show: false});
@@ -60,7 +62,13 @@ import {Container, Row, Card, Modal,} from "react-bootstrap";
              ))
          }
      }
+     handleShowDel=()=>{
+         this.setState({show:true})
+     }
 
+     handleCloseDel=()=>{
+         this.setState({show: false});
+     }
 
      deleteJob=(event)=>{
          console.log("inside del",event.target.id)
@@ -82,7 +90,9 @@ import {Container, Row, Card, Modal,} from "react-bootstrap";
              if (value.name!=="" && value.position!=="")
              {
                  if (this.data.length!==0){
+
                      return (
+
                          <Row className="Content" key={key} id={key}>
                              <Card style={{background:color}} className="card  blockquote text-white" >
                                  <Card.Body>
@@ -97,7 +107,11 @@ import {Container, Row, Card, Modal,} from "react-bootstrap";
                                      </h3>
                                      <Card.Text>
                                          <h5 className="posi">&nbsp;{value.position}</h5>
-                                         <a className="float-right">added {Math.floor(value.time/60)} mins ago...</a>
+                                         <br/>
+                                         <div className="float-right">
+                                             <p>added {Math.floor(value.time/60)} mins ago...</p>
+                                         </div>
+
                                      </Card.Text>
                                  </Card.Body>
                              </Card>
@@ -113,7 +127,7 @@ import {Container, Row, Card, Modal,} from "react-bootstrap";
          })
      }
 
-     handleShow = () => this.setState({show: true});
+
 
 
     render() {
@@ -144,12 +158,13 @@ import {Container, Row, Card, Modal,} from "react-bootstrap";
                             <Container>
                                 <Row>
 
-                                    <input className="form-control" id="comp"  type="text" placeholder="Company"/>
-                                    <i aria-hidden="true" className="search icon"></i>
+                                    <input className="form-control " id="comp"  type="text" placeholder="Company">
+                                       </input>
+
                                 </Row>
                                 <br/>
                                 <Row>
-                                    <input className=" form-control" id="pos" type="text"  placeholder="Position"/>
+                                    <input className="form-control" id="pos" type="text"  placeholder="Position"/>
                                 </Row>
                             </Container>
                         </Modal.Body>
@@ -161,8 +176,9 @@ import {Container, Row, Card, Modal,} from "react-bootstrap";
                         </Modal.Footer>
                     </Modal>
 
-                        {this.renderObject()}
 
+
+                    {this.renderObject()}
 
                 </Container>
 

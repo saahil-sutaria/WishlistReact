@@ -1,3 +1,6 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+
 #main{
 
     width: 50%;
@@ -17,9 +20,9 @@
     font-size: 30px;
     font-weight: 900;
 }
-modal-dialog {
-    width: 60px;
 
+.modal-dialog {
+    width: 300px; /* New width for default modal */
 }
 .float-right{
     font-size: 12px;
@@ -77,6 +80,7 @@ input[type=text]:focus {
 }
 .container:hover .button {
     opacity: 1;
+    background: white;
 }
 
 .posi{
