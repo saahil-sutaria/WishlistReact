@@ -3,7 +3,7 @@
 
 #main{
 
-    width: 50%;
+    width: 100%;
 }
 
 #Container{
@@ -42,7 +42,7 @@
 
 }
 .butt{
-    width: 375px;
+    width: 300px;
     color: gray;
     height: 40px;
     border: gray 2px solid;
@@ -53,8 +53,7 @@
 
 }
 .card{
-    width: 350px;
-    height: 150px;
+
     margin: auto;
     box-shadow: 0px 0px 5px black;
 }
