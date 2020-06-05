@@ -96,12 +96,14 @@ import {Container, Row, Card, Modal,InputGroup} from "react-bootstrap";
                          <Row className="Content" key={key} id={key}>
                              <Card style={{background:color}} className="card  blockquote text-white" >
                                  <Card.Body>
-                                     <h3> <img width="38"  src={img}></img>
+                                     <h3> <img width="38" id="bdsx" src={img}></img>
                                          &ensp;
                                          {value.name}
                                          <a>
                                              <button className="button float-right" id={key} onClick={this.deleteJob}>
-                                                 <img   id={key} width="20" src="/delIcon.png"/>
+
+                                                    <img id={key} width="20" src="/delIcon.png"/>
+
                                              </button>
                                          </a>
                                      </h3>

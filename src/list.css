@@ -2,10 +2,9 @@
 
 
 #main{
-
     width: 100%;
-}
 
+}
 #Container{
     margin: auto;
     position: relative;
@@ -26,6 +25,10 @@
 }
 .float-right{
     font-size: 12px;
+}
+img{
+    box-shadow: 10px 10px;
+    height: 200px;
 }
 #head{
     margin:auto;
